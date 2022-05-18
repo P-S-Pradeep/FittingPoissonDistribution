@@ -29,10 +29,14 @@ The Poisson distribution is the discrete probability distribution of the number 
 ![image](https://user-images.githubusercontent.com/104613195/166251988-d0c53205-6080-4f7b-ae4c-398178586637.png)
 
 # Program
-# Developed by
-# Register Number: 212220230034
-# Name: Pradeep P S
-``` python
+```
+# Developed by: Pradeep PS
+# Register Number:212220230034
+```
+```python
+
+
+
 import numpy as np
 import math
 import scipy.stats
@@ -41,14 +45,14 @@ f=[153,169,72,31,12,6,2]
 n=6
 N=np.sum(f)
 mean=np.inner(X,f)/N
-Pr=list(); E=list(); xi=list()
+Prob=list(); E=list(); xi=list()
 print("  X P(X=x) Obs.Fr  Ex.Fre   xi ")
 print("----------------------------------")
 for x in range(7):
-    Pr.append(math.exp(-mean)*mean*x/math.factorial(x))
-    E.append(Pr[x]*N)
+    Prob.append(math.exp(-mean)*mean**x/math.factorial(x))
+    E.append(Prob[x]*N)
     xi.append((f[x]-E[x])**2/E[x])
-    print("%2.2f %2.2f  %4.2f   %3.2f  %3.2f"%(x,Pr[x],f[x],E[x],xi[x]))
+    print("%2.2f %2.2f  %4.2f   %3.2f   %3.2f"%(x,Prob[x],f[x],E[x],xi[x]))
 print("----------------------------------")
 cal_chi2=np.sum(xi)
 print("Calculated value of Chi square is %4.2f"%cal_chi2)
@@ -58,16 +62,17 @@ if cal_chi2<tab_chi2:
     print("The given data can be fitted in Poissson distribution at 1% LOS")
 else:
     print("The given data cannot be fitted in Poisson distribution at 1% LOS")
-    
-    
+
+
 ```
 
-# Results and Output : 
-![image](https://user-images.githubusercontent.com/102652887/167066412-1e1123fa-c32b-46c3-ad64-9eb0e23bb5d4.png)
+ 
+
+# Output : 
+![TRGEY](https://user-images.githubusercontent.com/75235789/168960162-9aa581ee-7031-43e7-80c6-7311da8e8191.png)
 
 
-
+# Result:
 Thus, the program to fit poisson distribution is implemented
-
 
  
