@@ -1,4 +1,7 @@
-# Fitting Poisson Distribution
+### EXP NO: 02
+### DATE:
+
+# <p align = "center"> Fitting Poisson Distribution
 
 # Aim : 
 
